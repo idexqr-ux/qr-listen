@@ -1,4 +1,10 @@
-<!doctype html>
+<!doctype html><p class="browse-label" id="help-options">What would you like help with?</p>
+
+<div class="chips" role="group" aria-labelledby="help-options">
+  <button type="button" onclick="show('coffee')">Make a coffee</button>
+  <button type="button" onclick="show('water')">Refill the water</button>
+  <button type="button" onclick="show('pods')">Empty used pods</button>
+</div>
 <html lang="en-GB">
 <head>
   <meta charset="utf-8" />
@@ -94,33 +100,13 @@
     <h1>Listen</h1>
     <p>Spoken guidance, ready when you need it.</p>
 
-    <div class="listen-card">
-      <details class="listen-details" ontoggle="if(this.open) playAudio('audio/at-the-coffee-machine.mp3')">
-        <summary class="listen-summary">At the coffee machine</summary>
-        <p class="listen-text">A gentle introduction to the coffee machine and the space around it.</p>
-      </details>
-    </div>
+   <p class="browse-label" id="help-options">What would you like help with?</p>
 
-    <div class="listen-card">
-      <details class="listen-details" ontoggle="if(this.open) playAudio('audio/lets-make-a-coffee.mp3')">
-        <summary class="listen-summary">Let’s make a coffee</summary>
-        <p class="listen-text">A simple guide to making a drink, one step at a time.</p>
-      </details>
-    </div>
-
-    <div class="listen-card">
-      <details class="listen-details" ontoggle="if(this.open) playAudio('audio/refill-water.mp3')">
-        <summary class="listen-summary">Refill the water</summary>
-        <p class="listen-text">A short guide to topping up the machine when the water runs low.</p>
-      </details>
-    </div>
-
-    <div class="listen-card">
-      <details class="listen-details" ontoggle="if(this.open) playAudio('audio/empty-pods.mp3')">
-        <summary class="listen-summary">Empty the pods</summary>
-        <p class="listen-text">A quick guide to clearing used pods and keeping the machine ready.</p>
-      </details>
-    </div>
+<div class="chips" role="group" aria-labelledby="help-options">
+  <button type="button" onclick="show('coffee')">Make a coffee</button>
+  <button type="button" onclick="show('water')">Refill the water</button>
+  <button type="button" onclick="show('pods')">Empty used pods</button>
+</div>
 
     <p class="powered-by">Powered by IdexQR</p>
 
