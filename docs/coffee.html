@@ -1,10 +1,4 @@
-<!doctype html><p class="browse-label" id="help-options">What would you like help with?</p>
-
-<div class="chips" role="group" aria-labelledby="help-options">
-  <button type="button" onclick="show('coffee')">Make a coffee</button>
-  <button type="button" onclick="show('water')">Refill the water</button>
-  <button type="button" onclick="show('pods')">Empty used pods</button>
-</div>
+<!doctype html>
 <html lang="en-GB">
 <head>
   <meta charset="utf-8" />
@@ -39,33 +33,69 @@
       line-height: 1.5;
     }
 
-    .listen-card {
+    .browse-label {
+      margin: 18px 0 10px;
+      color: #5b6770;
+      font-size: 0.95rem;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .chips button {
+      background: #ffffff;
+      border: 1px solid #B8C6C1;
+      border-radius: 999px;
+      padding: 0.7rem 1rem;
+      font: inherit;
+      color: #2b2b2b;
+      cursor: pointer;
+    }
+
+    .chips button:hover,
+    .chips button:focus {
+      background: #F3F5F4;
+      border-color: #aebdb7;
+    }
+
+    .card {
       margin-top: 18px;
       background: #B8C6C1;
       border-radius: 18px;
       overflow: hidden;
       text-align: left;
-    }
-
-    .listen-details {
       padding: 16px;
     }
 
-    .listen-summary {
+    .card h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      font-weight: normal;
+    }
+
+    .quiet-button {
+      display: inline-block;
+      background: #ffffff;
+      border: 1px solid #B8C6C1;
+      border-radius: 999px;
+      padding: 0.8rem 1.1rem;
+      font: inherit;
+      color: #2b2b2b;
       cursor: pointer;
-      list-style: none;
-      font-size: 20px;
-      letter-spacing: 1px;
-      outline: none;
+      text-decoration: none;
+      margin: 8px 0 14px;
     }
 
-    .listen-summary::-webkit-details-marker {
-      display: none;
-    }
-
-    .listen-text {
-      margin-top: 12px;
-      margin-bottom: 0;
+    .quiet-button:hover,
+    .quiet-button:focus {
+      background: #F3F5F4;
+      border-color: #aebdb7;
     }
 
     .back-link {
@@ -100,13 +130,37 @@
     <h1>Listen</h1>
     <p>Spoken guidance, ready when you need it.</p>
 
-   <p class="browse-label" id="help-options">What would you like help with?</p>
+    <p class="browse-label" id="help-options">What would you like help with?</p>
 
-<div class="chips" role="group" aria-labelledby="help-options">
-  <button type="button" onclick="show('coffee')">Make a coffee</button>
-  <button type="button" onclick="show('water')">Refill the water</button>
-  <button type="button" onclick="show('pods')">Empty used pods</button>
-</div>
+    <div class="chips" role="group" aria-labelledby="help-options">
+      <button type="button" onclick="show('coffee')">Make a coffee</button>
+      <button type="button" onclick="show('water')">Refill the water</button>
+      <button type="button" onclick="show('pods')">Empty used pods</button>
+    </div>
+
+    <section id="coffee" class="card">
+      <h2>Make a coffee</h2>
+      <button class="quiet-button" type="button" onclick="playAudio('audio/lets-make-a-coffee.mp3')">
+        Tap and listen
+      </button>
+      <p>A simple guide to making a drink, one step at a time.</p>
+    </section>
+
+    <section id="water" class="card" hidden>
+      <h2>Refill the water</h2>
+      <button class="quiet-button" type="button" onclick="playAudio('audio/refill-water.mp3')">
+        Tap and listen
+      </button>
+      <p>A short guide to topping up the machine when the water runs low.</p>
+    </section>
+
+    <section id="pods" class="card" hidden>
+      <h2>Empty used pods</h2>
+      <button class="quiet-button" type="button" onclick="playAudio('audio/empty-pods.mp3')">
+        Tap and listen
+      </button>
+      <p>A quick guide to clearing used pods and keeping the machine ready.</p>
+    </section>
 
     <p class="powered-by">Powered by IdexQR</p>
 
@@ -130,6 +184,14 @@
 
       currentAudio.play().catch(err => {
         console.error("Audio failed to play:", file, err);
+      });
+    }
+
+    function show(id) {
+      const sections = ['coffee', 'water', 'pods'];
+
+      sections.forEach(sectionId => {
+        document.getElementById(sectionId).hidden = sectionId !== id;
       });
     }
   </script>
