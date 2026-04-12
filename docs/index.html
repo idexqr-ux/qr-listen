@@ -14,7 +14,13 @@
     </header>
 
     <section class="panel">
-      <button class="play-button" type="button">Tap and listen</button>
+      <button class="play-button" type="button" onclick="document.getElementById('audio').play()">
+  Tap and listen
+</button>
+
+<audio id="audio">
+  <source src="lets-make-a-coffee.mp3">
+</audio>
     </section>
   </main>
 </body>
