@@ -1,1 +1,39 @@
+body {
+  font-family: Georgia, serif;
+  background: #F7F9F8;
+  color: #2b2b2b;
+  margin: 0;
+}
 
+.wrap {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.intro {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.panel {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.play-button {
+  font: inherit;
+  padding: 14px 22px;
+  border: none;
+  border-radius: 999px;
+  background: #c9d5d0;
+  color: #2b2b2b;
+  cursor: pointer;
+}
