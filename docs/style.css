@@ -37,3 +37,9 @@ body {
   color: #2b2b2b;
   cursor: pointer;
 }
+
+.kicker {
+  margin: 0;
+  color: #5b6770;
+  letter-spacing: 0.02em;
+}
