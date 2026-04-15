@@ -75,24 +75,38 @@ body {
 }
 
 @media (max-width: 600px) {
+
+  /* brings the whole experience forward */
   body {
     font-size: 28px;
   }
 
+  /* main title */
   .hero h1 {
-    font-size: 2.4rem;
+    font-size: 2.5rem;
   }
 
-  h2 {
-    font-size: 1.5rem;
-  }
-
+  /* intro line under the title */
   .intro {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
   }
 
+  /* section headings like Making a coffee */
+  h2 {
+    font-size: 1.6rem;
+    margin-top: 20px;
+    margin-bottom: 6px;
+  }
+
+  /* buttons like Let’s begin and Listen */
   .quiet-button {
-    font-size: 1.2rem;
-    padding: 18px 28px;
+    font-size: 1.25rem;
+    padding: 18px 30px;
+    margin: 8px 0 18px;
+  }
+
+  /* moves the page slightly higher on the phone screen */
+  .wrap {
+    padding-top: 10px;
   }
 }
