@@ -112,7 +112,7 @@ body {
 
 @media (max-width: 600px) {
   .wrap {
-    padding-left: 0.8px;
-    padding-right: 0.8px;
+    padding-left: 0.6px;
+    padding-right: 0.6px;
   }
 }
