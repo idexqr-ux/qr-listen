@@ -28,7 +28,7 @@ body {
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-.play-button {
+.quiet-button {
   font: inherit;
   padding: 14px 22px;
   border: none;
