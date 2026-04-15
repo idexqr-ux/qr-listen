@@ -107,6 +107,12 @@ body {
 
   /* moves the page slightly higher on the phone screen */
   .wrap {
-    padding-top: 10px;
+    padding-top: 10px;  
+}
+
+@media (max-width: 600px) {
+  .wrap {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
