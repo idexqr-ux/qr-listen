@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Coffee Machine — Listen</title>
   <meta name="description" content="Simple spoken guidance for using the coffee machine." />
-  <link rel="stylesheet" href="style.css?v=9" />
+  <link rel="stylesheet" href="style.css?v=10" />
 </head>
 
 <body>
   <main>
-    <header class="wrap hero"> 
+    <header class="wrap hero">
       <h1 class="light-heading">Coffee Machine</h1>
 
       <p class="intro">
@@ -32,7 +32,7 @@
       </p>
     </header>
 
-    <section class="wrap">
+    <section class="wrap tasks">
       <h2>Making a coffee</h2>
       <button type="button" class="quiet-button" onclick="playEmbeddedAudio('coffeeAudio')">
         Listen
@@ -49,9 +49,9 @@
       </button>
     </section>
 
-   <div class="wrap">
-  <p class="powered-by">Powered by IdexQR</p>
-</div>
+    <div class="wrap footer-wrap">
+      <p class="powered-by">Powered by IdexQR</p>
+    </div>
   </main>
 
   <audio id="arrivalAudio" src="audio/at-the-coffee-machine.mp3" preload="auto"></audio>
