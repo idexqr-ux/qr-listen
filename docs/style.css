@@ -24,7 +24,7 @@ h2 {
 }
 
 .quiet-button {
-  font-size: 1.05rem;
+  font-size: 1.06rem;
   padding: 16px 26px;
   border-radius: 999px;
   letter-spacing: 0.04em;
@@ -76,7 +76,7 @@ body {
 
 @media (max-width: 600px) {
   body {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .hero h1 {
