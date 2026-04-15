@@ -24,7 +24,7 @@ h2 {
 }
 
 .quiet-button {
-  font-size: 1.06rem;
+  font-size: 1.08rem;
   padding: 16px 26px;
   border-radius: 999px;
   letter-spacing: 0.04em;
@@ -32,7 +32,7 @@ h2 {
 
 .quiet-button {
   font: inherit;
-  font-size: 1.20rem;   /* ⬅️ increase this */
+  font-size: 1.22rem;   /* ⬅️ increase this */
   padding: 16px 26px;
   border: none;
   border-radius: 999px;
@@ -76,7 +76,7 @@ body {
 
 @media (max-width: 600px) {
   body {
-    font-size: 22px;
+    font-size: 24px;
   }
 
   .hero h1 {
