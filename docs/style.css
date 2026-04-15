@@ -13,8 +13,8 @@ body {
 
 .hero h1 {
   font-size: 2rem;
-  margin-bottom: 8px;
   font-weight: normal;
+  color: #2b2b2b;
 }
 
 .intro {
@@ -58,8 +58,18 @@ body {
 }
 
 .quiet-button {
-  display: inline-block;
-  margin: 12px auto;
+  font: inherit;
+  padding: 14px 22px;
+  border: none;
+  border-radius: 999px;
+  background: #c9d5d0;
+  color: #2b2b2b;
+  cursor: pointer;
+  }
+
+.quiet-button {
+  letter-spacing: 0.06em;
+  text-transform: none; /* keep natural tone */
 }
 
 .object-image {
@@ -74,6 +84,16 @@ body {
 }
 
 .powered-by {
+  font-size: 0.9rem;
+  color: #6f7c78;
   text-align: center;
+  margin-top: 30px;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 1.2rem;
   margin-top: 24px;
+  margin-bottom: 8px;
+  color: #3a3a3a;
 }
