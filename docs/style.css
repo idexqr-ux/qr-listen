@@ -32,11 +32,12 @@ h2 {
 
 .quiet-button {
   font: inherit;
-  padding: 14px 24px;
+  font-size: 1.15rem;   /* ⬅️ increase this */
+  padding: 16px 26px;
   border: none;
   border-radius: 999px;
   background: #c9d5d0;
-  color: #2b2b2b;
+  color: #1f1f1f;
   cursor: pointer;
   letter-spacing: 0.04em;
   display: inline-block;
