@@ -64,10 +64,16 @@ body {
 
 .object-image {
   display: block;
-  margin: 20px auto;
   max-width: 100%;
   height: auto;
+  margin: 20px auto;
 }
+
 .hero {
   text-align: center;
+}
+
+.powered-by {
+  text-align: center;
+  margin-top: 24px;
 }
