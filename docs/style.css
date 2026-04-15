@@ -29,13 +29,6 @@ h2 {
   margin-bottom: 18px;
 }
 
-.object-image {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 20px auto;
-}
-
 .quiet-button {
   font: inherit;
   padding: 14px 22px;
