@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Coffee Machine — Listen</title>
   <meta name="description" content="Simple spoken guidance for using the coffee machine." />
-  <link rel="stylesheet" href="style.css?v=6" />
+  <link rel="stylesheet" href="style.css?v=7" />
 </head>
 
 <body>
@@ -20,43 +20,38 @@
       <img src="images/coffee.jpg" alt="Coffee machine" class="object-image" />
 
       <button type="button" class="quiet-button" onclick="playEmbeddedAudio('arrivalAudio')">
-        Listen to this guide
+        Start here
       </button>
 
-      <!-- Screen reader only -->
       <p class="sr-only">
         You’ve opened the coffee machine guide.
       </p>
 
       <p class="sr-only">
-        Choose an option to hear step-by-step guidance.
+        Choose an option below to hear step-by-step guidance.
       </p>
     </header>
 
     <section class="wrap">
-      <h2>Make a coffee</h2>
-
+      <h2>Making a coffee</h2>
       <button type="button" class="quiet-button" onclick="playEmbeddedAudio('coffeeAudio')">
-        Make a coffee
+        Listen
       </button>
 
-      <h2>Refill the water</h2>
-
+      <h2>Refilling the water</h2>
       <button type="button" class="quiet-button" onclick="playEmbeddedAudio('waterAudio')">
-        Refill the water
+        Listen
       </button>
 
-      <h2>Empty used pods</h2>
-
+      <h2>Emptying used pods</h2>
       <button type="button" class="quiet-button" onclick="playEmbeddedAudio('podsAudio')">
-        Empty used pods
+        Listen
       </button>
     </section>
 
     <p class="powered-by">Powered by IdexQR</p>
   </main>
 
-  <!-- Audio -->
   <audio id="arrivalAudio" src="audio/at-the-coffee-machine.mp3" preload="auto"></audio>
   <audio id="coffeeAudio" src="audio/lets-make-a-coffee.mp3" preload="auto"></audio>
   <audio id="waterAudio" src="audio/refill-water.mp3" preload="auto"></audio>
