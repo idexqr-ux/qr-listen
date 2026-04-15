@@ -3,26 +3,90 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Listen</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Coffee Machine — Listen</title>
+  <meta name="description" content="Simple spoken guidance for using the coffee machine." />
+  <link rel="stylesheet" href="style.css?v=6" />
 </head>
+
 <body>
-  <main class="wrap">
-    <header class="hero">
-    
-<p>Spoken guidance, ready when you need it.</p>
+  <main>
+    <header class="wrap hero" style="text-align: center;">
+      <h1 class="light-heading">Coffee Machine</h1>
+
+      <p class="intro">
+        Simple everyday help.
+      </p>
+
+      <img src="images/coffee.jpg" alt="Coffee machine" class="object-image" />
+
+      <button type="button" class="quiet-button" onclick="playEmbeddedAudio('arrivalAudio')">
+        Listen to this guide
+      </button>
+
+      <!-- Screen reader only -->
+      <p class="sr-only">
+        You’ve opened the coffee machine guide.
+      </p>
+
+      <p class="sr-only">
+        Choose an option to hear step-by-step guidance.
+      </p>
     </header>
 
-    <section class="panel">
-  <button class="play-button" type="button" onclick="document.getElementById('audio').play()">
-    Tap and listen
-  </button>
+    <section class="wrap">
+      <h2>Make a coffee</h2>
 
-  <audio id="audio">
-    <source src="audio/lets-make-a-coffee.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-</section>
+      <button type="button" class="quiet-button" onclick="playEmbeddedAudio('coffeeAudio')">
+        Make a coffee
+      </button>
+
+      <h2>Refill the water</h2>
+
+      <button type="button" class="quiet-button" onclick="playEmbeddedAudio('waterAudio')">
+        Refill the water
+      </button>
+
+      <h2>Empty used pods</h2>
+
+      <button type="button" class="quiet-button" onclick="playEmbeddedAudio('podsAudio')">
+        Empty used pods
+      </button>
+    </section>
+
+    <p class="powered-by">Powered by IdexQR</p>
   </main>
+
+  <!-- Audio -->
+  <audio id="arrivalAudio" src="audio/at-the-coffee-machine.mp3" preload="auto"></audio>
+  <audio id="coffeeAudio" src="audio/lets-make-a-coffee.mp3" preload="auto"></audio>
+  <audio id="waterAudio" src="audio/refill-water.mp3" preload="auto"></audio>
+  <audio id="podsAudio" src="audio/empty-pods.mp3" preload="auto"></audio>
+
+  <script>
+    let currentAudio = null;
+
+    function stopCurrentAudio() {
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+      }
+    }
+
+    function playEmbeddedAudio(id) {
+      stopCurrentAudio();
+      currentAudio = document.getElementById(id);
+
+      if (!currentAudio) return;
+
+      currentAudio.currentTime = 0;
+
+      const playPromise = currentAudio.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(err => {
+          console.error("Embedded audio failed:", id, err);
+        });
+      }
+    }
+  </script>
 </body>
 </html>
