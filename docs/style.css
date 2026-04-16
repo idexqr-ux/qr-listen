@@ -12,11 +12,10 @@ body {
 .place {
   text-align: center;
   font-size: 0.9rem;
-  color: #9aa6a2;
-  margin-bottom: 0.4rem;
+ color: #3f4a47;      /* ⬅️ deeper, grounded version */
+  margin-bottom: 0.8rem;
   letter-spacing: 0.02em;
 }
-
 .hero,
 .tasks,
 .footer-wrap {
@@ -86,7 +85,7 @@ h2 {
 .light-heading {
   font-size: 1.5rem;
   font-weight: 400;
-  color: #7f8c88;
+  color: #9aa6a2;   /* or similar soft grey */
   margin-top: 0;
   margin-bottom: 1.2rem;
   text-align: center;
