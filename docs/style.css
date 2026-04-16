@@ -139,7 +139,7 @@ body {
 
 .kicker {
   text-align: center;
-  font-size: 1.2rem;        /* ⬅️ increased */
+  font-size: 1.5rem;        /* ⬅️ increased */
   letter-spacing: 0.06em;
   color: #4f5c58;           /* slightly stronger */
   margin-bottom: 0.2rem;
@@ -157,7 +157,7 @@ body {
   text-align: center;
   margin-bottom: 1.5rem;
   color: #6f7c78;     /* ⬅️ softer grey */
-  font-size: 1rem;    /* optional: slightly smaller */
+  font-size: 0.8rem;    /* optional: slightly smaller */
 }
 
 .browse-label {
