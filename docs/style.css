@@ -139,17 +139,18 @@ body {
 
 .kicker {
   text-align: center;
-  font-size: 1.5rem;        /* ⬅️ increased */
-  letter-spacing: 0.06em;
-  color: #4f5c58;           /* slightly stronger */
-  margin-bottom: 0.2rem;
+  font-size: 2rem;
+  letter-spacing: 0.04em;
+  color: #3f4a47;
+  margin-bottom: 0.1rem;
 }
 
 .light-heading {
-  font-size: 2.2rem;
+  font-size: 1.5rem;
   font-weight: 400;
-  color: #6f7c78;
-  margin-bottom: 0.3rem;
+  color: #7f8c88;
+  margin-top: 0;
+  margin-bottom: 1.2rem;
   text-align: center;
 }
 
