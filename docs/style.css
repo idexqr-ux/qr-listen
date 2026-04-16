@@ -9,6 +9,14 @@ body {
   line-height: 1.6;
 }
 
+.place {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #9aa6a2;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.02em;
+}
+
 .hero,
 .tasks,
 .footer-wrap {
