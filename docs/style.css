@@ -4,6 +4,11 @@
   padding: 20px;
 }
 
+body {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
 .hero,
 .tasks,
 .footer-wrap {
@@ -37,6 +42,10 @@ h2 {
   margin: 12px 0 24px;
 }
 
+.hero .quiet-button {
+  font-size: 1.05rem;
+}
+
 .powered-by {
   font-size: 0.9rem;
   font-weight: normal;
@@ -58,16 +67,40 @@ h2 {
   border: 0 !important;
 }
 
-.hero .quiet-button {
-  font-size: 1.05rem;
+.kicker {
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 0.04em;
+  color: #3f4a47;
+  margin-bottom: 0.1rem;
 }
 
-body {
-  font-size: 18px;
-  line-height: 1.6;
+.light-heading {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #7f8c88;
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  text-align: center;
 }
 
-/* chip buttons for coffee options */
+.intro {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #6f7c78;
+  font-size: 0.8rem;
+}
+
+.browse-label {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.chips {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
 .chips button {
   font: inherit;
   font-size: 1.08rem;
@@ -79,7 +112,7 @@ body {
   cursor: pointer;
   letter-spacing: 0.04em;
   display: inline-block;
-  margin: 8px 8px 18px 0;
+  margin: 8px 6px 10px;
 }
 
 .discover-text {
@@ -109,7 +142,7 @@ body {
   }
 
   .intro {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
   h2 {
@@ -127,7 +160,7 @@ body {
   .chips button {
     font-size: 1.25rem;
     padding: 18px 30px;
-    margin: 8px 8px 18px 0;
+    margin: 8px 6px 12px;
   }
 
   .wrap {
@@ -135,52 +168,13 @@ body {
     padding-left: 0.6px;
     padding-right: 0.6px;
   }
-}
 
-.kicker {
-  text-align: center;
-  font-size: 2rem;
-  letter-spacing: 0.04em;
-  color: #3f4a47;
-  margin-bottom: 0.1rem;
-}
+  .kicker {
+    font-size: 2.1rem;
+  }
 
-.light-heading {
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: #7f8c88;
-  margin-top: 0;
-  margin-bottom: 1.2rem;
-  text-align: center;
-}
-
-.intro {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  color: #6f7c78;     /* ⬅️ softer grey */
-  font-size: 0.8rem;    /* optional: slightly smaller */
-}
-
-.browse-label {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.chips {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-.chips button {
-  font: inherit;
-  font-size: 1.08rem;
-  padding: 16px 26px;
-  border: none;
-  border-radius: 999px;
-  background: #c9d5d0;
-  color: #1a1a1a;
-  cursor: pointer;
-  letter-spacing: 0.04em;
-  display: inline-block;
-  margin: 8px 6px 18px;
+  .light-heading {
+    font-size: 1.45rem;
+    margin-bottom: 1.4rem;
+  }
 }
