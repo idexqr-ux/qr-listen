@@ -4,53 +4,54 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Coffee Machine — Listen</title>
-  <meta name="description" content="Simple spoken guidance for using the coffee machine." />
-  <link rel="stylesheet" href="style.css?v=12" />
+  <link rel="stylesheet" href="style.css?v=23" />
 </head>
-
 <body>
-  <main>
-    <header class="wrap hero">
-      <h1 class="light-heading">Coffee Machine</h1>
+  <main class="wrap">
 
-      <p class="intro">I’m here to guide you.</p>
+    <h1>Listen</h1>
+    <p>Spoken guidance, ready when you need it.</p>
 
-      <button type="button" class="quiet-button" onclick="playEmbeddedAudio('arrivalAudio')">
-       Let’s begin
-      </button>
+    <p class="browse-label" id="help-options">What would you like help with?</p>
 
-    <p class="sr-only">
-  You’ve opened the coffee machine guide.
-</p>
-
-<p class="sr-only">
-  Choose a Listen button below, and I’ll be there to guide you.
-</p>
-    </header>
-
-    <section class="wrap tasks">
-      <h2>Making a coffee</h2>
-      <button type="button" class="quiet-button" onclick="playEmbeddedAudio('coffeeAudio')">
-        Listen
-      </button>
-
-      <h2>Refilling the water</h2>
-      <button type="button" class="quiet-button" onclick="playEmbeddedAudio('waterAudio')">
-        Listen
-      </button>
-
-      <h2>Emptying used pods</h2>
-      <button type="button" class="quiet-button" onclick="playEmbeddedAudio('podsAudio')">
-        Listen
-      </button>
-    </section>
-
-    <div class="wrap footer-wrap">
-      <p class="powered-by">Powered by IdexQR</p>
+    <div class="chips" role="group" aria-labelledby="help-options">
+      <button type="button" onclick="playSection('coffeeAudio', 'coffeeText')">Make a coffee</button>
+      <button type="button" onclick="playSection('waterAudio', 'waterText')">Refill the water</button>
+      <button type="button" onclick="playSection('podsAudio', 'podsText')">Empty used pods</button>
     </div>
+
+    <div id="coffeeText" class="discover-text" hidden>
+      <p>
+        Follow these steps to make a coffee using the machine.
+        Place your cup ready, choose your drink, and wait while the machine pours.
+      </p>
+    </div>
+
+    <div id="waterText" class="discover-text" hidden>
+      <p>
+        This guide helps you refill the water safely.
+        Remove the water tank carefully, fill it, and return it securely to the machine.
+      </p>
+    </div>
+
+    <div id="podsText" class="discover-text" hidden>
+      <p>
+        This guide shows you how to empty the used pod container.
+        Remove the tray carefully, clear the pods, and place it back properly.
+      </p>
+    </div>
+
+    <div class="center-button">
+      <button
+        type="button"
+        class="quiet-button"
+        onclick="backToTop()">
+        Back to top
+      </button>
+    </div>
+
   </main>
 
-  <audio id="arrivalAudio" src="audio/at-the-coffee-machine.mp3" preload="auto"></audio>
   <audio id="coffeeAudio" src="audio/lets-make-a-coffee.mp3" preload="auto"></audio>
   <audio id="waterAudio" src="audio/refill-water.mp3" preload="auto"></audio>
   <audio id="podsAudio" src="audio/empty-pods.mp3" preload="auto"></audio>
@@ -65,21 +66,34 @@
       }
     }
 
-    function playEmbeddedAudio(id) {
+    function hideAllText() {
+      document.querySelectorAll('.discover-text').forEach(section => {
+        section.hidden = true;
+      });
+    }
+
+    function playSection(audioId, textId) {
       stopCurrentAudio();
-      currentAudio = document.getElementById(id);
+      hideAllText();
+
+      currentAudio = document.getElementById(audioId);
+      const textBlock = document.getElementById(textId);
+
+      if (textBlock) {
+        textBlock.hidden = false;
+      }
 
       if (!currentAudio) return;
-
       currentAudio.currentTime = 0;
+      currentAudio.play().catch(() => {});
+    }
 
-      const playPromise = currentAudio.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(err => {
-          console.error("Embedded audio failed:", id, err);
-        });
-      }
+    function backToTop() {
+      stopCurrentAudio();
+      hideAllText();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   </script>
+
 </body>
 </html>
