@@ -13,11 +13,36 @@
       <p class="kicker">Coffee Machine</p>
       <h1 class="light-heading">Listen</h1>
       
-    <div class="chips" role="group" aria-labelledby="help-options">
-      <button type="button" onclick="playSection('coffeeAudio', 'coffeeText')">Make a coffee</button>
-      <button type="button" onclick="playSection('waterAudio', 'waterText')">Refill the water</button>
-      <button type="button" onclick="playSection('podsAudio', 'podsText')">Empty used pods</button>
+    <div class="chips">
+
+  <div class="chip-item">
+    <button type="button" onclick="playSection('coffeeAudio', 'coffeeText')">
+      Make a coffee
+    </button>
+    <div id="coffeeText" class="discover-text" hidden>
+      <p>…your coffee text…</p>
     </div>
+  </div>
+
+  <div class="chip-item">
+    <button type="button" onclick="playSection('waterAudio', 'waterText')">
+      Refill the water
+    </button>
+    <div id="waterText" class="discover-text" hidden>
+      <p>…your water text…</p>
+    </div>
+  </div>
+
+  <div class="chip-item">
+    <button type="button" onclick="playSection('podsAudio', 'podsText')">
+      Empty used pods
+    </button>
+    <div id="podsText" class="discover-text" hidden>
+      <p>…your pods text…</p>
+    </div>
+  </div>
+
+</div>
 
     <div id="coffeeText" class="discover-text" hidden>
       <p>
