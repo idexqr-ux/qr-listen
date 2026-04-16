@@ -100,8 +100,8 @@ h2 {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 1.5rem;
+  gap: 12px;
+  margin-bottom: 1.5rem 0;
 }
 
 .chips button {
