@@ -116,3 +116,20 @@ body {
     padding-right: 0.6px;
   }
 }
+
+.discover-text {
+  margin-top: 1rem;
+  padding: 1rem 1.25rem;
+  border-radius: 16px;
+  background: #f7f9f8;
+  text-align: left;
+}
+
+.discover-text p {
+  margin: 0;
+}
+
+.center-button {
+  text-align: center;
+  margin-top: 2rem;
+}
