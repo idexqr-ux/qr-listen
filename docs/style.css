@@ -178,6 +178,11 @@ h2 {
   transform: scale(0.97);
 }
 
+.chips button.selected {
+  background: #AEBDB7;
+  border: 1px solid #9EAEA8;
+}
+
 /* ---------------------------------
    Content panels
 --------------------------------- */
