@@ -62,6 +62,21 @@ body {
   margin-top: 32px;
 }
 
+.listen-image {
+  display: block;
+  max-width: 140px;
+  width: 100%;
+  height: auto;
+  margin: 0.8rem auto 1.2rem;
+  opacity: 0.85;
+}
+
+.hero {
+  background: url("images/cottage.png") no-repeat center top;
+  background-size: 200px;
+  opacity: 0.95;
+}
+
 /* ---------------------------------
    Navigation
 --------------------------------- */
