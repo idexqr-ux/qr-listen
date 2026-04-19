@@ -132,6 +132,15 @@ h2 {
   transform: scale(0.98);
 }
 
+.quiet-button {
+  transition: transform 0.08s ease, background 0.08s ease;
+}
+
+.quiet-button:focus {
+  outline: 2px solid #7a8f88;
+  outline-offset: 2px;
+}
+
 /* ---------------------------------
    Browse chips 
 --------------------------------- */
