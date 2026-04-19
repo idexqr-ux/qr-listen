@@ -176,6 +176,12 @@ h2 {
     margin: 8px 0 18px;
   }
 
+  .back-button {
+  display: inline-block;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+}
+
   .wrap {
     padding-top: 10px;
     padding-left: 0.6px;
