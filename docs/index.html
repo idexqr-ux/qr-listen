@@ -10,14 +10,14 @@
   <main class="wrap">
 
     <header class="hero" style="text-align: center;">
-      <p class="place">Willow Cottage, Matchem Park</p>
-      <p class="kicker">Coffee Machine</p>
-      <h1 class="light-heading">Listen</h1>
-    </header>
+     <p class="place" aria-hidden="true">
+  Willow Cottage, Matchem Park
+</p>
 
-    <a href="index.html" class="quiet-button back-button">
-      ← Back to EntryHub
-    </a>
+<p class="sr-only">
+  Willow Cottage, Match-em Park
+</p>
+    </header>
 
     <div class="chips">
 
@@ -81,16 +81,19 @@
 
     </div>
 
-    <div class="center-button">
-      <button
-        type="button"
-        class="quiet-button"
-        onclick="backToTop()">
-        Back to top
-      </button>
-    </div>
+    <div class="footer-wrap">
 
-  </main>
+  <button class="quiet-button" onclick="backToTop()">
+    Back to top
+  </button>
+
+  <a href="index.html" class="back-link">
+    ← Back to EntryHub
+  </a>
+
+</div>
+
+   </main>
 
   <audio id="coffeeAudio" src="audio/lets-make-a-coffee.mp3" preload="auto"></audio>
   <audio id="waterAudio" src="audio/refill-water.mp3" preload="auto"></audio>
