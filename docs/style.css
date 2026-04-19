@@ -49,6 +49,12 @@ body {
   display: block;
   margin-top: 18px;
 }
+
+.back-link,
+.back-link:visited {
+  color: #2b2b2b;        /* same as normal text */
+  text-decoration: none;
+}
 /* ---------------------------------
    Typography
 --------------------------------- */
