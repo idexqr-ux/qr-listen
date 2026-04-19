@@ -6,6 +6,7 @@
   --muted-soft: #9aa6a2;
 
   --button-bg: #c9d5d0;
+  --button-active: #AEBDB7;
   --panel-bg: #f7f9f8;
 }
 
@@ -27,6 +28,12 @@ body {
   justify-content: flex-start;
   padding-top: 50px;
   text-align: center;
+}
+
+.wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 18px 16px;
 }
 
 /* ---------------------------------
@@ -52,14 +59,26 @@ body {
 
 .footer-wrap .back-link {
   display: block;
-  margin-top: 18px;
+  margin-top: 32px;
 }
+
+/* ---------------------------------
+   Navigation
+--------------------------------- */
 
 .back-link,
 .back-link:visited {
-  color: #2b2b2b;        /* same as normal text */
+  color: #2b2b2b;
   text-decoration: none;
+  border-bottom: none;
 }
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+}
+
 /* ---------------------------------
    Typography
 --------------------------------- */
@@ -135,25 +154,17 @@ h2 {
   font-size: 1.22rem;
   letter-spacing: 0.04em;
   cursor: pointer;
+
+  transition: transform 0.08s ease, background 0.08s ease;
 }
 
 .hero .quiet-button {
   font-size: 1.05rem;
 }
 
-.back-button {
-  display: inline-block;
-  margin-bottom: 16px;
-  font-size: 0.95rem;
-}
-
 .quiet-button:active {
-  background: #AEBDB7;
+  background: var(--button-active);
   transform: scale(0.98);
-}
-
-.quiet-button {
-  transition: transform 0.08s ease, background 0.08s ease;
 }
 
 .quiet-button:focus {
@@ -162,7 +173,7 @@ h2 {
 }
 
 /* ---------------------------------
-   Browse chips 
+   Browse chips
 --------------------------------- */
 
 .chips {
@@ -191,15 +202,22 @@ h2 {
   font-size: 1.25rem;
   letter-spacing: 0.04em;
   cursor: pointer;
+
+  transition: transform 0.08s ease, background 0.08s ease;
 }
 
 .chips button:active {
-  background: #AEBDB7;
+  background: var(--button-active);
   transform: scale(0.97);
 }
 
+.chips button:focus {
+  outline: 2px solid #7a8f88;
+  outline-offset: 2px;
+}
+
 .chips button.selected {
-  background: #AEBDB7;
+  background: var(--button-active);
   border: 1px solid #9EAEA8;
 }
 
