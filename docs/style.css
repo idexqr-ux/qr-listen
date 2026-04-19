@@ -127,6 +127,11 @@ h2 {
   font-size: 0.95rem;
 }
 
+.quiet-button:active {
+  background: #AEBDB7;
+  transform: scale(0.98);
+}
+
 /* ---------------------------------
    Browse chips 
 --------------------------------- */
