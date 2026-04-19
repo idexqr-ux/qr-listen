@@ -172,6 +172,18 @@ h2 {
   outline-offset: 2px;
 }
 
+.quiet-button,
+.chips button {
+  transition: transform 0.08s ease, background 0.08s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.quiet-button:active,
+.chips button:active {
+  background: #AEBDB7;
+  transform: scale(0.98);
+}
+
 /* ---------------------------------
    Browse chips
 --------------------------------- */
@@ -217,7 +229,7 @@ h2 {
 }
 
 .chips button.selected {
-  background: var(--button-active);
+  background: #AEBDB7;
   border: 1px solid #9EAEA8;
 }
 
