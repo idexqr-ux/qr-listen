@@ -164,6 +164,11 @@ h2 {
   cursor: pointer;
 }
 
+.chips button:active {
+  background: #AEBDB7;
+  transform: scale(0.97);
+}
+
 /* ---------------------------------
    Content panels
 --------------------------------- */
