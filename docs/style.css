@@ -33,7 +33,7 @@ body {
 .wrap {
   max-width: 860px;
   margin: 0 auto;
-  padding: 18px 16px;
+  padding: 12px 16px 18px;
 }
 
 /* ---------------------------------
@@ -101,7 +101,8 @@ body {
 }
 
 .kicker {
-  margin-bottom: 0.1rem;
+  margin-top: 0;
+  margin-bottom: 0.05rem;
   font-size: 2rem;
   letter-spacing: 0.04em;
   text-align: center;
@@ -109,6 +110,7 @@ body {
 }
 
 .hero h1 {
+  margin-top: 0
   margin-bottom: 10px;
   font-size: 2.2rem;
   font-weight: normal;
@@ -281,42 +283,24 @@ h2 {
 
 @media (max-width: 600px) {
   body {
-    font-size: 28px;
+    font-size: 19px;
+    padding-top: 10px;
   }
 
   .wrap {
-    padding-top: 10px;
-    padding-left: 0.6px;
-    padding-right: 0.6px;
+    padding-top: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
   }
 
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .kicker {
-    font-size: 2.1rem;
-  }
-
-  .intro {
-    font-size: 1rem;
-  }
-
-  h2 {
-    margin-top: 20px;
-    margin-bottom: 6px;
-    font-size: 1.6rem;
+  .listen-image {
+    margin: 0.35rem auto 0.7rem;
+    max-width: 130px;
   }
 
   .quiet-button {
-    margin: 8px 0 18px;
-    padding: 18px 30px;
-    font-size: 1.25rem;
-  }
-
-  .light-heading {
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
-    color: #8a9692;
+    margin: 6px 0 14px;
+    padding: 16px 28px;
+    font-size: 1.2rem;
   }
 }
