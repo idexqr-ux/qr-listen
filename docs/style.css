@@ -170,7 +170,16 @@ h2 {
   font-size: 1.5rem;
   font-weight: 400;
   text-align: center;
-  color: var(--muted-soft);
+  color: var(--muted-deep);
+}
+
+.family-endorsement {
+  margin: -0.95rem 0 1.2rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: var(--muted);
 }
 
 .intro {
